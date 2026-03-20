@@ -30,13 +30,6 @@ if(pheno %in% c('BC', 'IBD', 'CKD', 'AF', 'CAD')){
 ### gender is the sex at birth
 ### an example of PRS dataset:
 head(dfPRS)
-#    person_id  PGS000297   PGS001229 pheno ancestry      age     sex             PC1
-# 1   1000004 0.00833752 1.32662e-04 1.872      eur 83.54278      Male   -0.000174243
-# 2   1000033 0.00814360 1.04787e-04 1.874      eur 67.54278      Male   -0.000171157
-# 3   1000059 0.00848452 1.23336e-04 1.645      eur 66.54346    Female   -0.000169760
-# 4   1000061 0.00801136 1.42889e-06 1.803      eur 59.54278      Male   -0.000172519
-# 5   1000070 0.00829886 8.75520e-05 1.588      eur 76.54483 PMI: Skip   -0.000174638
-# 6   1000079 0.00797628 1.10177e-04 1.884      eur 31.54278      Male   -0.000180965
 
 n_cores <- detectCores()
 # register the cluster
@@ -119,7 +112,7 @@ r2.est <- foreach(seed = 1:niters,
                                                             bestAncestry$Value[which(bestAncestry$ancestry == ancestry)]],
                                               continuous = continuous)
                       # 4) the unsupervised ensemblePRS
-                      s.UNSemblePRS <- UNSemblePRS(PRS_X[dfPRS_sample$ancestry == ancestry, ])
+                      s.UNSemblePRS <- UNSemblePRS(PRS_X[dfPRS_sample$ancestry == ancestry, ])$UNSemble
                       r2.UNSemblePRS <- partial.R2(df = dfPRS_sample[dfPRS_sample$ancestry == ancestry,],
                                                      ypred = s.UNSemblePRS,
                                                      continuous = continuous)
@@ -164,7 +157,7 @@ r2.est <- foreach(seed = 1:niters,
                                               continuous = continuous)
                       # 4) the unsupervised ensemblePRS
                       s.UNSemblePRS <- UNSemblePRS(PRS_X[dfPRS_sample$age >= age_range[1] &
-                                                           dfPRS_sample$age < age_range[2], ])
+                                                           dfPRS_sample$age < age_range[2], ])$UNSemble
                       r2.UNSemblePRS <- partial.R2(df = dfPRS_sample[dfPRS_sample$age >= age_range[1] &
                                                                          dfPRS_sample$age < age_range[2], ],
                                                      ypred = s.UNSemblePRS,
@@ -200,7 +193,7 @@ r2.est <- foreach(seed = 1:niters,
                                               continuous = continuous,
                                             cov.set = c('age'))
                       # 4) the unsupervised ensemblePRS
-                      s.UNSemblePRS <- UNSemblePRS(PRS_X[dfPRS_sample$sex == SexStrata, ])
+                      s.UNSemblePRS <- UNSemblePRS(PRS_X[dfPRS_sample$sex == SexStrata, ])$UNSemble
                       r2.UNSemblePRS <- partial.R2(df = dfPRS_sample[dfPRS_sample$sex == SexStrata, ],
                                                      ypred = s.UNSemblePRS,
                                                      continuous = continuous,

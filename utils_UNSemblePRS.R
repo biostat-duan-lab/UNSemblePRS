@@ -1,8 +1,12 @@
-# Main function
-# Input: p PRS model predictions for n individuals, denoted by matrix X (n x p)
-UNSemblePRS <- function(X, scale = TRUE, prop = 1){
+## Main function: UNSemblePRS()
+## Input:
+## X: n by p matrix of PRS predictions
+## n: number of individuals
+## p: number of PRS pre-trained models
+
+UNSemblePRS <- function(X, standardize = TRUE, prop = 1){
   # Step 1: Scale each PRS to have zero mean and unit variance
-  if(scale){
+  if(standardize){
     X <- scale(X)
   }
   # Step 2: Compute the feature space with the kernel mapping
@@ -27,8 +31,12 @@ UNSemblePRS <- function(X, scale = TRUE, prop = 1){
   final.score <- X %*% w.opt
   
   # Output: The final aggregated PRS score
-  return(final.score)
+  return(list(
+    UNSemble = final.score, 
+    weight = w.opt
+  ))
 }
+
 
 # return the partial R2 of PRS scores given the age, sex and top 30 PCs
 partial.R2 <- function(df, ypred,
