@@ -11,25 +11,20 @@ niters <- 100 # number of replications
 Nsub <- 1000 # size of random samples
 kernel_fun <- polydot(degree = 3) # kernel function for feature mapping
 # phenotype of interest
-# continuous traits: height, BMI, HDL, LDL, Diastolic Blood Pressure (DBP)
-# binary traits: breast cancer (BC), Inflammatory Bowel Disease (IBD),
-## Chronic kidney disease (CKD), Atrial fibrillation (AF), 
-## Coronary artery disease (CAD)
+# continuous traits: height, BMI, HDL, LDL, Total cholesterol, SBP, DBP
+# binary traits: Chronic kidney disease (CKD), Hyperlipidemia, Hypertension, Obesity
 pheno <- 'height' 
-if(pheno %in% c('height', 'bmi', 'hdl', 'ldl', 'dbp')){
+if(pheno %in% c('height', 'bmi', 'hdl', 'ldl', 'TC', 'SBP', 'DBP')){
   continuous <- TRUE
 }
-if(pheno %in% c('BC', 'IBD', 'CKD', 'AF', 'CAD')){
+if(pheno %in% c('CKD', 'Hyperlipidemia', 'Hypertension', 'Obesity')){
   continuous <- FALSE
 }
 # prepare the full PRS dataframe
 ## 1. person_id and the PRS scores from the PGS Catalog
 ## 2. phenotype of the trait of interest
 ## 3. Patient information: ancestry, age, gender and top genetic PCs
-### age should be larger than 21,
 ### gender is the sex at birth
-### an example of PRS dataset:
-head(dfPRS)
 
 n_cores <- detectCores()
 # register the cluster
