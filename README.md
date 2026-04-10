@@ -8,7 +8,7 @@ This repository provides R code for UNSemblePRS, an unsupervised ensemble learni
 
 [AoU_compute_PRS_PGScatalog.ipynb] provides R code to compute polygenic risk scores (PRSs) within the All of Us (AoU) Research Program using pre-trained models obtained from the PGS Catalog.
 
-For more details on computing PRSs using the PGS Catalog, we recommend that users explore "pgsc_calc" (https://github.com/PGScatalog/pgsc_calc), a pipeline for calculating PRSs or PGss using scoring files published in the PGS Catalog and/or custom scoring files.
+We highly recommend that users explore "pgsc_calc" (https://github.com/PGScatalog/pgsc_calc), a pipeline for calculating PRSs or PGSs using scoring files published in the PGS Catalog and/or custom scoring files.
 
 Reference
 Lambert, Wingfield, et al. (2024). Enhancing the Polygenic Score Catalog with tools for score calculation and ancestry normalization. Nature Genetics. https://doi.org/10.1038/s41588-024-01937-x
