@@ -10,5 +10,4 @@ This repository provides R code for UNSemblePRS, an unsupervised ensemble learni
 
 We highly recommend that users explore "pgsc_calc" (https://github.com/PGScatalog/pgsc_calc), a pipeline for calculating PRSs or PGSs using scoring files published in the PGS Catalog and/or custom scoring files.
 
-Reference
-Lambert, Wingfield, et al. (2024). Enhancing the Polygenic Score Catalog with tools for score calculation and ancestry normalization. Nature Genetics. https://doi.org/10.1038/s41588-024-01937-x
+Reference: Lambert, Wingfield, et al. (2024). Enhancing the Polygenic Score Catalog with tools for score calculation and ancestry normalization. Nature Genetics. https://doi.org/10.1038/s41588-024-01937-x
