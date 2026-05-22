@@ -1,10 +1,11 @@
 # UNSemblePRS
 
-UNSemblePRS is an R-based framework for unsupervised ensemble learning of polygenic risk scores (PRS). The repository provides utility functions for integrating and evaluating multiple pre-trained PRS models across diverse prediction settings and populations.
+UNSemblePRS is an R-based framework for unsupervised ensemble learning of polygenic risk scores (PRS). This repository provides utility functions for integrating and evaluating multiple pre-trained PRS models across diverse prediction settings and populations.
 
 For methodological details, please see our medRxiv preprint:
 
-> Chenyin Gao, Yu-Jyun Huang, et al. *Unsupervised Ensemble Learning for Efficient Integration of Pre-trained Polygenic Risk Scores.*  
+> Chenyin Gao, Yu-Jyun Huang, et al.  
+> *Unsupervised Ensemble Learning for Efficient Integration of Pre-trained Polygenic Risk Scores.*  
 > https://www.medrxiv.org/content/10.1101/2025.01.06.25320058v2
 
 ---
@@ -29,7 +30,7 @@ install.packages(c("dplyr", "RISCA"))
 
 ## Installation
 
-UNSemblePRS is currently not available on CRAN. Users should clone the GitHub repository and source the main utility file manually. The main function for implement UNSemblePRS is "UNSemblePRS()"
+UNSemblePRS is currently not available on CRAN. Users should clone the GitHub repository and manually source the main utility file. The primary function for implementing UNSemblePRS is `UNSemblePRS()`.
 
 ### Clone the repository
 
@@ -86,13 +87,13 @@ Covariates may include sex, age, and genetic principal components.
 
 ### `eval_UNSemblePRS.R`
 
-Contains analysis code used for the All of Us (AoU) evaluation experiments, including:
+Contains the analysis code used for the All of Us (AoU) evaluation experiments, including:
 
 - comparisons with competing PRS integration methods,
 - sex-stratified analyses,
 - ancestry-stratified analyses.
 
-To protect participant privacy, this script contains analysis workflows only and does not include individual-level data.
+To protect participant privacy, this script contains analysis workflows only and does not include any individual-level data.
 
 ### `AoU_compute_PRS_PGScatalog.ipynb`
 
@@ -109,15 +110,13 @@ Contains supplementary metadata files related to the PGS Catalog resources used 
   Complete list of PGS IDs evaluated for each phenotype.
 
 - `AoU_PGSID_to_remove.csv`  
-  List of PGS IDs excluded from analysis due to potential data leakage, because the corresponding models were trained using All of Us genetic and phenotypic data.
+  List of PGS IDs excluded from analysis because the corresponding models were trained using All of Us genetic and phenotypic data, which could introduce potential data leakage.
 
 ---
 
 ## Recommended External Tool
 
-We highly recommend users explore:
-
-### `pgsc_calc`
+We highly recommend that users explore `pgsc_calc`:
 
 https://github.com/PGScatalog/pgsc_calc
 
