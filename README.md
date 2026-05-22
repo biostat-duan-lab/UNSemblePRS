@@ -4,7 +4,7 @@ UNSemblePRS is an R-based framework for unsupervised ensemble learning of polyge
 
 For methodological details, please see our medRxiv preprint:
 
-> Huang YJ, et al. *UNSemblePRS: An Unsupervised Ensemble Learning Framework for Polygenic Risk Scores.*  
+> Chenyin Gao, Yu-Jyun Huang, et al. *Unsupervised Ensemble Learning for Efficient Integration of Pre-trained Polygenic Risk Scores.*  
 > https://www.medrxiv.org/content/10.1101/2025.01.06.25320058v2
 
 ---
@@ -29,7 +29,7 @@ install.packages(c("dplyr", "RISCA"))
 
 ## Installation
 
-UNSemblePRS is currently not available on CRAN. Users should clone the GitHub repository and source the main utility file manually.
+UNSemblePRS is currently not available on CRAN. Users should clone the GitHub repository and source the main utility file manually. The main function for implement UNSemblePRS is "UNSemblePRS()"
 
 ### Clone the repository
 
