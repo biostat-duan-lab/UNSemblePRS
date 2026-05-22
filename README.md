@@ -46,7 +46,7 @@ cd UNSemblePRS
 source("utils_UNSemblePRS.R")
 ```
 
-The primary implemntation function is `UNSemblePRS()`.
+The primary function is `UNSemblePRS()`.
 
 **3. (Optional) Run the example workflow**
 
@@ -62,7 +62,7 @@ source("example_code.R")
 # Load the core functions
 source("utils_UNSemblePRS.R")
 
-# Run UNSemblePRS on a matrix of pre-trained PRS scores
+# Run UNSemblePRS by using simulated pre-trained PRS scores (prepared in matrix format)
 # (see example_code.R for a fully reproducible example)
 ensemble_prs <- UNSemblePRS(prs_matrix)
 ```
@@ -109,7 +109,9 @@ Contains the analysis code used for the All of Us (AoU) evaluation experiments, 
 To protect participant privacy, this script contains analysis workflows only and does not include any individual-level data.
 
 ### `AoU_compute_PRS_PGScatalog.ipynb`
-Provides code for computing polygenic risk scores within the All of Us Research Program using pre-trained scoring files obtained from the PGS Catalog.
+Provides code for computing polygenic risk scores within the All of Us Research Program using pre-trained scoring files obtained from the PGS Catalog. 
+**Note:** This notebook cannot be run directly, as it requires access to individual-level genetic data that is only available within the secure AoU Researcher Workbench. To reproduce this workflow, users must register for an All of Us Researcher Workbench account, set up a workspace, and preprocess the individual-level genetic data within that controlled tier environment. The code is provided as a reference/template; individual-level data are not included in order to protect participant privacy.
+
 
 ### `PGS_catalog_info/`
 Contains supplementary metadata files related to the PGS Catalog resources used in this study:
