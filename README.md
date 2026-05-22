@@ -138,8 +138,6 @@ If you use UNSemblePRS in your research, please cite the corresponding manuscrip
 
 ---
 
-## Contact
-
 For questions, bug reports, or feature requests, please open an issue on the GitHub repository:
 
 https://github.com/biostat-duan-lab/UNSemblePRS
