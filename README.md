@@ -91,7 +91,7 @@ UNSemblePRS/
 Contains the core implementation of UNSemblePRS, including functions for:
 - unsupervised ensemble learning of PRS models,
 - PRS aggregation,
-- partial R² computation after covariate adjustment,
+- partial $R^2$ computation after covariate adjustment,
 - evaluation for both continuous and binary traits.
 
 Covariates may include sex, age, and genetic principal components.
