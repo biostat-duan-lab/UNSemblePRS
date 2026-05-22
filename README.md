@@ -131,7 +131,7 @@ We highly recommend that users explore [`pgsc_calc`](https://github.com/PGScatal
 
 ## Citation
 
-If you use UNSemblePRS in your research, please cite:
+If you use **UNSemblePRS** in your research, please cite:
 
 > Chenyin Gao, Yu-Jyun Huang, et al. *Unsupervised Ensemble Learning for Efficient Integration of Pre-trained Polygenic Risk Scores.* medRxiv (2025). https://www.medrxiv.org/content/10.1101/2025.01.06.25320058v2
 
