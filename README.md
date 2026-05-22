@@ -81,7 +81,6 @@ UNSemblePRS/
 ├── eval_UNSemblePRS.R               # All of Us evaluation analyses
 ├── AoU_compute_PRS_PGScatalog.ipynb # PRS computation in All of Us
 ├── PGS_catalog_info/                # PGS Catalog metadata
-└── data/                            # Example data
 ```
 
 ---
