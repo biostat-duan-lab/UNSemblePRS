@@ -110,6 +110,7 @@ To protect participant privacy, this script contains analysis workflows only and
 
 ### `AoU_compute_PRS_PGScatalog.ipynb`
 Provides code for computing polygenic risk scores within the All of Us Research Program using pre-trained scoring files obtained from the PGS Catalog. 
+
 **Note:** This notebook cannot be run directly, as it requires access to individual-level genetic data that is only available within the secure AoU Researcher Workbench. To reproduce this workflow, users must register for an All of Us Researcher Workbench account, set up a workspace, and preprocess the individual-level genetic data within that controlled tier environment. The code is provided as a reference/template; individual-level data are not included in order to protect participant privacy.
 
 
