@@ -31,7 +31,7 @@ No additional system dependencies are required beyond a standard R installation.
 
 ## Installation
 
-UNSemblePRS is **not** currently available on CRAN. To use it, clone this repository and source the main utility file directly.
+UNSemblePRS is **not** currently available on CRAN. To use it, please clone this repository and source the main utility file directly.
 
 **1. Clone the repository**
 
@@ -123,7 +123,7 @@ Contains supplementary metadata files related to the PGS Catalog resources used 
 
 ## Recommended External Tool
 
-We recommend that users explore [`pgsc_calc`](https://github.com/PGScatalog/pgsc_calc), a pipeline for calculating PRSs/PGSs using scoring files published in the PGS Catalog and/or custom scoring files.
+We highly recommend that users explore [`pgsc_calc`](https://github.com/PGScatalog/pgsc_calc), a pipeline for calculating PRSs/PGSs using scoring files published in the PGS Catalog and/or custom scoring files.
 
 > Lambert, S. A., et al. (2024). *Enhancing the Polygenic Score Catalog with tools for score calculation and ancestry normalization.* **Nature Genetics.** https://doi.org/10.1038/s41588-024-01937-x
 
@@ -139,4 +139,4 @@ If you use UNSemblePRS in your research, please cite:
 
 ## Contact
 
-For questions, bug reports, or feature requests, please [open an issue](https://github.com/biostat-duan-lab/UNSemblePRS/issues) on the GitHub repository.
+For questions, bug reports, or feature requests, please [open an issue](https://github.com/biostat-duan-lab/UNSemblePRS/issues) on our GitHub repository.
