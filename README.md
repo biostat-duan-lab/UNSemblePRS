@@ -1,6 +1,11 @@
 # UNSemblePRS
 
-UNSemblePRS is an R-based framework for ensemble polygenic risk score (PRS) modeling and evaluation. The repository provides utility functions for integrating and evaluating PRS methods across multiple prediction settings.
+UNSemblePRS is an R-based framework for unsupervised ensemble learning of polygenic risk scores (PRS). The repository provides utility functions for integrating and evaluating multiple pre-trained PRS models across diverse prediction settings and populations.
+
+For methodological details, please see our medRxiv preprint:
+
+> Huang YJ, et al. *UNSemblePRS: An Unsupervised Ensemble Learning Framework for Polygenic Risk Scores.*  
+> https://www.medrxiv.org/content/10.1101/2025.01.06.25320058v2
 
 ---
 
@@ -39,7 +44,7 @@ cd UNSemblePRS
 source("utils_UNSemblePRS.R")
 ```
 
-### Run the example script
+### Run the example workflow
 
 ```r
 source("example_code.R")
@@ -51,11 +56,79 @@ source("example_code.R")
 
 ```text
 UNSemblePRS/
-├── utils_UNSemblePRS.R   # Main utility functions
-├── example_code.R        # Example workflow
-├── README.md             # Documentation
-└── data/                 # Example or supporting datasets
+├── utils_UNSemblePRS.R
+├── example_code.R
+├── eval_UNSemblePRS.R
+├── AoU_compute_PRS_PGScatalog.ipynb
+├── PGS_catalog_info/
+├── README.md
+└── data/
 ```
+
+---
+
+## File Descriptions
+
+### `example_code.R`
+
+Provides a complete example workflow for generating example pre-trained PRS models and demonstrates how to use UNSemblePRS to compute the final aggregated PRS.
+
+### `utils_UNSemblePRS.R`
+
+Contains the core implementation of UNSemblePRS, including functions for:
+
+- unsupervised ensemble learning of PRS models,
+- PRS aggregation,
+- partial R² computation after covariate adjustment,
+- evaluation for both continuous and binary traits.
+
+Covariates may include sex, age, and genetic principal components.
+
+### `eval_UNSemblePRS.R`
+
+Contains analysis code used for the All of Us (AoU) evaluation experiments, including:
+
+- comparisons with competing PRS integration methods,
+- sex-stratified analyses,
+- ancestry-stratified analyses.
+
+To protect participant privacy, this script contains analysis workflows only and does not include individual-level data.
+
+### `AoU_compute_PRS_PGScatalog.ipynb`
+
+Provides code for computing polygenic risk scores (PRSs) within the All of Us Research Program using pre-trained scoring files obtained from the PGS Catalog.
+
+### `PGS_catalog_info/`
+
+Contains supplementary metadata files related to the PGS Catalog resources used in this study:
+
+- `pgs_all_metadata_v2024.xlsx`  
+  PGS Catalog metadata corresponding to the version used in this study.
+
+- `PGSID_by_phenotype.xlsx`  
+  Complete list of PGS IDs evaluated for each phenotype.
+
+- `AoU_PGSID_to_remove.csv`  
+  List of PGS IDs excluded from analysis due to potential data leakage, because the corresponding models were trained using All of Us genetic and phenotypic data.
+
+---
+
+## Recommended External Tool
+
+We highly recommend users explore:
+
+### `pgsc_calc`
+
+https://github.com/PGScatalog/pgsc_calc
+
+`pgsc_calc` is a pipeline for calculating PRSs/PGSs using scoring files published in the PGS Catalog and/or custom scoring files.
+
+Reference:
+
+> Lambert SA, Wingfield B, et al. (2024).  
+> *Enhancing the Polygenic Score Catalog with tools for score calculation and ancestry normalization.*  
+> Nature Genetics.  
+> https://doi.org/10.1038/s41588-024-01937-x
 
 ---
 
@@ -82,26 +155,6 @@ If you use UNSemblePRS in your research, please cite the corresponding manuscrip
 
 ## Contact
 
-For questions or bug reports, please open an issue on the GitHub repository:
+For questions, bug reports, or feature requests, please open an issue on the GitHub repository:
 
 https://github.com/biostat-duan-lab/UNSemblePRS
-
-
-
-
-
-This repository provides R code for UNSemblePRS, an unsupervised ensemble learning framework for efficiently integrating pre-trained polygenic risk scores (PRS). For methodological details, see our medRxiv preprint: https://www.medrxiv.org/content/10.1101/2025.01.06.25320058v2
-
-[example_code.R] provides code for generating example pre-trained models and demonstrates how to use UNSemblePRS to compute the final aggregated PRS.
-
-[utils_UNSemblePRS.R] contains the core implementation of UNSemblePRS and includes functions to compute partial R2 for PRS after adjusting for covariates (e.g., sex and genetic principal components) in both continuous and binary trait models.
-
-[eval_UNSemblePRS.R] contains code for the All of Us analyses, including comparisons with competing methods as well as sex- and ancestry-stratified analyses. To protect data privacy, this script includes analysis code only and does not contain any individual-level data.
-
-[AoU_compute_PRS_PGScatalog.ipynb] provides R code to compute polygenic risk scores (PRSs) within the All of Us (AoU) Research Program using pre-trained models obtained from the PGS Catalog.
-
-[PGS_catalog_info/ folder] contains: (i) PGS Catalog metadata corresponding to the version used in this study (pgs_all_metadata_v2024.xlsx); (ii) the complete list of PGS IDs for all pre-trained models evaluated for each trait (PGSID_by_phenotype.xlsx); and (iii) the PGS IDs excluded from analysis due to potential data leakage, as the corresponding models were trained using All of Us (AoU) genetic and phenotypic data (AoU_PGSID_to_remove.csv)."
-
-We highly recommend that users explore "pgsc_calc" (https://github.com/PGScatalog/pgsc_calc), a pipeline for calculating PRSs or PGSs using scoring files published in the PGS Catalog and/or custom scoring files.
-
-Reference: Lambert, Wingfield, et al. (2024). Enhancing the Polygenic Score Catalog with tools for score calculation and ancestry normalization. Nature Genetics. https://doi.org/10.1038/s41588-024-01937-x
