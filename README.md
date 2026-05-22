@@ -124,7 +124,7 @@ https://github.com/PGScatalog/pgsc_calc
 
 Reference:
 
-> Lambert SA, Wingfield B, et al. (2024).  
+> Samuel A. Lambert, et al.(2024).  
 > *Enhancing the Polygenic Score Catalog with tools for score calculation and ancestry normalization.*  
 > Nature Genetics.  
 > https://doi.org/10.1038/s41588-024-01937-x
