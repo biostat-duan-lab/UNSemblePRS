@@ -131,20 +131,6 @@ Reference:
 
 ---
 
-## Notes for Version Control
-
-System-generated files such as `.DS_Store` and `.Rhistory` are not necessary for reproducibility or version control. These files have been removed from the repository and added to `.gitignore`.
-
-### Recommended `.gitignore`
-
-```gitignore
-.DS_Store
-.Rhistory
-.RData
-.Rproj.user/
-```
-
----
 
 ## Citation
 
