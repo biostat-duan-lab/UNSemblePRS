@@ -1,6 +1,6 @@
 # UNSemblePRS
 
-**UNSemblePRS** is an R-based framework for **UNS**upervised **ensemble** learning of **P**olygenic **R**isk **S**cores (PRS). It provides utility functions for integrating and evaluating multiple pre-trained PRS models across diverse prediction settings and populations.
+**UNSemblePRS** is an R-based framework for **UN**supervised en**Semble** learning of **P**olygenic **R**isk **S**cores (PRS). It provides utility functions for integrating and evaluating multiple pre-trained PRS models across diverse prediction settings and populations.
 
 For methodological details, please see our medRxiv preprint:
 
