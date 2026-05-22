@@ -1,3 +1,95 @@
+# UNSemblePRS
+
+UNSemblePRS is an R-based framework for ensemble polygenic risk score (PRS) modeling and evaluation. The repository provides utility functions for integrating and evaluating PRS methods across multiple prediction settings.
+
+---
+
+## Requirements
+
+UNSemblePRS is implemented in R and requires the following packages.
+
+### Core dependencies
+
+```r
+install.packages(c("kernlab", "sparsepca"))
+```
+
+### Additional packages for evaluation utilities
+
+```r
+install.packages(c("dplyr", "RISCA"))
+```
+
+---
+
+## Installation
+
+UNSemblePRS is currently not available on CRAN. Users should clone the GitHub repository and source the main utility file manually.
+
+### Clone the repository
+
+```bash
+git clone https://github.com/biostat-duan-lab/UNSemblePRS.git
+cd UNSemblePRS
+```
+
+### Load the main functions in R
+
+```r
+source("utils_UNSemblePRS.R")
+```
+
+### Run the example script
+
+```r
+source("example_code.R")
+```
+
+---
+
+## Repository Structure
+
+```text
+UNSemblePRS/
+├── utils_UNSemblePRS.R   # Main utility functions
+├── example_code.R        # Example workflow
+├── README.md             # Documentation
+└── data/                 # Example or supporting datasets
+```
+
+---
+
+## Notes for Version Control
+
+System-generated files such as `.DS_Store` and `.Rhistory` are not necessary for reproducibility or version control. These files have been removed from the repository and added to `.gitignore`.
+
+### Recommended `.gitignore`
+
+```gitignore
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user/
+```
+
+---
+
+## Citation
+
+If you use UNSemblePRS in your research, please cite the corresponding manuscript when available.
+
+---
+
+## Contact
+
+For questions or bug reports, please open an issue on the GitHub repository:
+
+https://github.com/biostat-duan-lab/UNSemblePRS
+
+
+
+
+
 This repository provides R code for UNSemblePRS, an unsupervised ensemble learning framework for efficiently integrating pre-trained polygenic risk scores (PRS). For methodological details, see our medRxiv preprint: https://www.medrxiv.org/content/10.1101/2025.01.06.25320058v2
 
 [example_code.R] provides code for generating example pre-trained models and demonstrates how to use UNSemblePRS to compute the final aggregated PRS.
