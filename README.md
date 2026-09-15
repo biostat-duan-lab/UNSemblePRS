@@ -140,3 +140,9 @@ If you use **UNSemblePRS** in your research, please cite:
 ## Contact
 
 For questions, bug reports, or feature requests, please [open an issue](https://github.com/biostat-duan-lab/UNSemblePRS/issues) on our GitHub repository.
+
+
+
+## License
+
+UNSemblePRS is distributed under the MIT License. See the [LICENSE](LICENSE) file for details.
